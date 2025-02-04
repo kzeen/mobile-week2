@@ -9,7 +9,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
+    <ImageView
+        android:src="@drawable/car_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_second_activity"
@@ -19,5 +20,6 @@
         android:layout_marginTop="44dp"
         android:onClick="startSecondActivity"/>
 <!--    4 constraints will make it centered as each side will be pulling the view towards it -->
+<!--    ImageView is clickable like a button-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
