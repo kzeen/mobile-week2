@@ -1,7 +1,8 @@
 package com.example.week2applpication;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -23,4 +24,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+        public void startSecondActivity(View v) {
+            Intent intent;
+
+            intent = new Intent(this, SecondActivity.class); // Explicit intent - create mission
+
+            startActivity(intent); // launch mission
+        }
 }
