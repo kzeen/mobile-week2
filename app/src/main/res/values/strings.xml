@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Week2Applpication</string>
     <string name="start_second_activity">Start Second Activity</string>
+    <string name="landed_in_second_activity">Landed in second activity</string>
 </resources>
