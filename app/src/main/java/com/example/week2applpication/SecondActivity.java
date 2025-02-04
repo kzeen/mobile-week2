@@ -1,6 +1,7 @@
 package com.example.week2applpication;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +23,9 @@ public class SecondActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        int receivedData = getIntent().getIntExtra("parameter", -1); // Fetch sent data
+        TextView textView = findViewById(R.id.textView);
+        textView.setText("Landed in second activity with data: " + receivedData);
     }
 }

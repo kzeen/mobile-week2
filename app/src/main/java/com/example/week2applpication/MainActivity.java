@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent;
 
             intent = new Intent(this, SecondActivity.class); // Explicit intent - create mission
-
+            intent.putExtra("parameter", 3); // add parameter to mission
             startActivity(intent); // launch mission
         }
 }
