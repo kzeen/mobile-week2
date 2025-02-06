@@ -1,8 +1,8 @@
 package com.example.week2applpication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -29,9 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView iv_car = findViewById(R.id.iv_car);
         ImageView iv_plane = findViewById(R.id.iv_plane);
+        ImageView iv_phone = findViewById(R.id.iv_phone);
 
         iv_car.setOnClickListener(v -> startSecondActivity("car"));
         iv_plane.setOnClickListener(v -> startSecondActivity("plane"));
+
+        iv_phone.setOnClickListener(v -> startImplicitIntentActivity());
     }
 
         public void startSecondActivity(String from) {
@@ -40,5 +43,13 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(this, SecondActivity.class); // Explicit intent - create mission
             intent.putExtra("parameter", from); // add parameter to mission
             startActivity(intent); // launch mission
+        }
+
+        public void startImplicitIntentActivity() {
+            Intent intent;
+
+            intent = new Intent(Intent.ACTION_DIAL); // Since we just open phone app without modifying the number, we don't need permissions as this is "safe"
+            intent.setData(Uri.parse("tel:0123433239"));
+            startActivity(intent);
         }
 }
