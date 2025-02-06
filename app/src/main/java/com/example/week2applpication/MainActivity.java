@@ -3,6 +3,8 @@ package com.example.week2applpication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -24,13 +26,19 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView iv_car = findViewById(R.id.iv_car);
+        ImageView iv_plane = findViewById(R.id.iv_plane);
+
+        iv_car.setOnClickListener(v -> startSecondActivity("car"));
+        iv_plane.setOnClickListener(v -> startSecondActivity("plane"));
     }
 
-        public void startSecondActivity(View v) {
+        public void startSecondActivity(String from) {
             Intent intent;
 
             intent = new Intent(this, SecondActivity.class); // Explicit intent - create mission
-            intent.putExtra("parameter", 3); // add parameter to mission
+            intent.putExtra("parameter", from); // add parameter to mission
             startActivity(intent); // launch mission
         }
 }

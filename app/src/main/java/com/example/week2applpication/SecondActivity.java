@@ -24,7 +24,7 @@ public class SecondActivity extends AppCompatActivity {
             return insets;
         });
 
-        int receivedData = getIntent().getIntExtra("parameter", -1); // Fetch sent data
+        String receivedData = getIntent().getStringExtra("parameter"); // Fetch sent data
         TextView textView = findViewById(R.id.textView);
         textView.setText("Landed in second activity with data: " + receivedData);
     }

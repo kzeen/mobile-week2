@@ -18,8 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="44dp"
-        android:onClick="startSecondActivity"/>
+        android:layout_marginTop="44dp" />
 <!--    4 constraints will make it centered as each side will be pulling the view towards it -->
 <!--    ImageView is clickable like a button-->
     <ImageView
@@ -31,7 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_car"
-        android:layout_marginTop="44dp"
-        android:onClick="startSecondActivity"/>
+        android:layout_marginTop="22dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
