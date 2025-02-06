@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
 //    Explicit (internal code) vs implicit (external code) intent
+//    Only the main activity started automatically, the rest have to be activated manually
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
